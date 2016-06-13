@@ -7,7 +7,6 @@ class CreateShifts < ActiveRecord::Migration
 
       t.string :time_zone
 
-      t.integer :shift_type
       t.integer :accepts_mentors
 
       t.boolean :booked?
