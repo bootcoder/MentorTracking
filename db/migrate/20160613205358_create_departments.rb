@@ -2,6 +2,10 @@ class CreateDepartments < ActiveRecord::Migration
   def change
     create_table :departments do |t|
 
+      t.string :name
+
+      t.integer :cost_center
+
       t.timestamps null: false
     end
   end
