@@ -53,7 +53,7 @@ group :production  do
 end
 
 group :development, :test do
-  gem 'dotenv'
+  gem 'dotenv-rails'
   gem 'capistrano-rails'
   gem 'pry'
   gem 'rspec-rails'
