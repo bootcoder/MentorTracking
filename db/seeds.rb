@@ -23,7 +23,7 @@ hunter = Admin.create(first_name: "Hunter",
 
 james = Mentor.create(first_name: "James",
              last_name: "Bomotti",
-             phone: "415 246-1132",
+             phone: "415-246-1132",
              email: "zilliahix@gmail.com",
              img_url: "https://avatars.githubusercontent.com/u/10890778?v=3",
              github_handle: "jbomotti",
