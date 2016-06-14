@@ -44,6 +44,8 @@ gem 'spring',        group: :development
 
 gem 'unicorn'
 
+gem 'haml-rails'
+
 group :production  do
   gem 'rails_12factor'
 end
@@ -51,7 +53,6 @@ end
 group :development, :test do
   gem 'dotenv'
   gem 'capistrano-rails'
-  # gem 'debugger'
   gem 'pry'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
