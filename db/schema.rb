@@ -17,8 +17,7 @@ ActiveRecord::Schema.define(version: 20160613205358) do
   enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "name"
     t.string   "phone"
     t.string   "email"
     t.string   "img_url"
@@ -51,22 +50,31 @@ ActiveRecord::Schema.define(version: 20160613205358) do
   end
 
   create_table "mentors", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "name"
     t.string   "phone"
     t.string   "email"
     t.string   "img_url"
     t.string   "github_handle"
     t.string   "cohort"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "token"
+    t.string   "refresh_token"
+    t.string   "secret"
     t.text     "address"
     t.text     "bio"
-    t.boolean  "is_employed",   default: false
+    t.integer  "token_expires_at"
+    t.boolean  "is_employed",      default: false
     t.date     "dbc_start"
     t.date     "dbc_end"
     t.integer  "location_id"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
+
+  add_index "mentors", ["provider", "uid"], name: "index_mentors_on_provider_and_uid", unique: true, using: :btree
+  add_index "mentors", ["provider"], name: "index_mentors_on_provider", using: :btree
+  add_index "mentors", ["uid"], name: "index_mentors_on_uid", using: :btree
 
   create_table "notes", force: :cascade do |t|
     t.text     "body"

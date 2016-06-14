@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :shifts
   resources :employments
 
-  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/auth/:provider/callback', to: 'sessions#create', as: 'login'
+  delete '/logout', to: 'sessions#destroy'
 
 end

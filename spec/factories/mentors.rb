@@ -1,8 +1,7 @@
 FactoryGirl.define do
   factory :mentor do
     association :location
-    first_name {Faker::Name.first_name}
-    last_name {Faker::Name.last_name}
+    name {Faker::Name.first_name}
     phone {Faker::PhoneNumber.phone_number}
     email {Faker::Internet.email}
     img_url {Faker::Avatar.image}
@@ -11,5 +10,10 @@ FactoryGirl.define do
     address {Faker::Address.street_address}
     dbc_start {Faker::Time.between(200.days.ago, Date.today, :all)}
     dbc_end {Faker::Time.between(2.days.ago, Date.today, :all)}
+    provider { "google"}
+    uid { "1234" }
+    token { "123123" }
+    refresh_token { "234124241" }
+    token_expires_at { 123 }
   end
 end

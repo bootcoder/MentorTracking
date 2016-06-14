@@ -52,6 +52,8 @@ gem "omniauth-google-oauth2"
 
 gem 'bootstrap', '~> 4.0.0.alpha3'
 
+gem 'awesome_print'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
@@ -64,6 +66,9 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'capistrano-rails'
   gem 'pry'
+  gem 'pry-byebug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'

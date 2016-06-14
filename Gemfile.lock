@@ -57,6 +57,11 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.3.6.2)
       execjs
+    awesome_print (1.7.0)
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap (4.0.0.alpha3)
@@ -222,6 +227,9 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-byebug (3.4.0)
+      byebug (~> 9.0)
+      pry (~> 0.10)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -343,6 +351,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
+  better_errors
+  binding_of_caller
   bootstrap (~> 4.0.0.alpha3)
   byebug
   capistrano-rails
@@ -362,6 +373,7 @@ DEPENDENCIES
   omniauth-google-oauth2
   pg (~> 0.15)
   pry
+  pry-byebug
   rails (= 4.2.6)
   rails-assets-tether (>= 1.1.0)!
   rails_12factor

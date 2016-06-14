@@ -1,3 +1,10 @@
 .jumbotron
   %h1 Hello World
 
+.row
+  = ENV['GOOGLE_CONTACT_CLIENT_SECRET']
+.row
+  = ENV['GOOGLE_CONTACT_CLIENT_ID']
+.row
+  = session[:user_id]
+

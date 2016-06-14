@@ -6,8 +6,7 @@ class Mentor < ActiveRecord::Base
   has_many :shifts
   has_many :notes
 
-  validates_presence_of :first_name
-  validates_presence_of :last_name
+  validates_presence_of :name
   validates_presence_of :phone
   validates_presence_of :email
   validates_presence_of :img_url
@@ -30,6 +29,14 @@ class Mentor < ActiveRecord::Base
       self.is_employed = false
     end
     self
+  end
+
+  def self.from_omniauth(auth_hash)
+    binding.pry
+    user = find_or_create_by(uid: auth_hash['uid'], provider: auth_hash['provider'])
+    user.img_url = auth_hash['info']['image']
+    user.save!
+    user
   end
 
 end
