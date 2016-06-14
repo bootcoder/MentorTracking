@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :shifts
   resources :employments
 
+  get '/auth/:provider/callback', to: 'sessions#create'
+
 end
