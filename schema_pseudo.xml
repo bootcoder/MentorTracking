@@ -119,6 +119,9 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="departments" row="id" />
 </row>
+<row name="recurrs_every" null="1" autoincrement="0">
+<datatype>ENUM</datatype>
+<default>NULL</default></row>
 <row name="accepts_mentors" null="1" autoincrement="0">
 <datatype>ENUM</datatype>
 <default>NULL</default></row>
