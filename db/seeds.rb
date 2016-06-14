@@ -63,8 +63,8 @@ shift = Shift.create(time_zone: "UTC -08:00",
                      admin: hunter,
                      location: san_francisco,
                      department: ph1,
-                     start: 1.day.from_now,
-                     end: 2.days.from_now)
+                     start_time: 1.day.from_now,
+                     end_time: 2.days.from_now)
 
 shift_to_book = Shift.create(time_zone: "UTC -08:00",
                      accepts_mentors: 2,
@@ -72,8 +72,8 @@ shift_to_book = Shift.create(time_zone: "UTC -08:00",
                      admin: hunter,
                      location: san_francisco,
                      department: ph1,
-                     start: 3.days.from_now,
-                     end: 4.days.from_now)
+                     start_time: 3.days.from_now,
+                     end_time: 4.days.from_now)
 
 note = hunter.notes.create(body: "James is GREAT!", mentor_id: james.id)
 

@@ -5,8 +5,8 @@ class Shift < ActiveRecord::Base
   belongs_to :admin
   belongs_to :location
 
-  validates_presence_of :start
-  validates_presence_of :end
+  validates_presence_of :start_time
+  validates_presence_of :end_time
 
   enum accepts_mentors: [:employed_mentors, :unemployed_mentors, :all_mentors]
 

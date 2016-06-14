@@ -77,8 +77,8 @@ ActiveRecord::Schema.define(version: 20160613205358) do
   end
 
   create_table "shifts", force: :cascade do |t|
-    t.datetime "start"
-    t.datetime "end"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.string   "time_zone",       default: "UTC -08:00"
     t.integer  "accepts_mentors", default: 2
     t.integer  "recurrs_every",   default: 3

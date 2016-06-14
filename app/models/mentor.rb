@@ -15,7 +15,6 @@ class Mentor < ActiveRecord::Base
   validates_presence_of :cohort
   validates_presence_of :address
   validates_presence_of :dbc_start
-  validates_presence_of :dbc_end
 
   validates_uniqueness_of  :phone
   validates_uniqueness_of  :email
