@@ -48,6 +48,8 @@ gem 'unicorn'
 
 gem 'haml-rails'
 
+gem "omniauth-google-oauth2"
+
 group :production  do
   gem 'rails_12factor'
 end
