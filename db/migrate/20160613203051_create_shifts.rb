@@ -5,11 +5,12 @@ class CreateShifts < ActiveRecord::Migration
       t.datetime :start
       t.datetime :end
 
-      t.string :time_zone
+      t.string :time_zone, default: "UTC -08:00"
 
-      t.integer :accepts_mentors
+      t.integer :accepts_mentors, default: 2
+      t.integer :recurrs_every, default: 2
 
-      t.boolean :booked?
+      t.boolean :booked, default: false
 
       t.references :admin
       t.references :mentor

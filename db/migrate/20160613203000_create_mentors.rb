@@ -13,7 +13,7 @@ class CreateMentors < ActiveRecord::Migration
       t.text :address
       t.text :bio
 
-      t.boolean :is_employed?
+      t.boolean :is_employed, default: false
 
       t.date :dbc_start
       t.date :dbc_end
