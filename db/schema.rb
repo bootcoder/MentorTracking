@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 20160613205358) do
     t.datetime "end"
     t.string   "time_zone",       default: "UTC -08:00"
     t.integer  "accepts_mentors", default: 2
-    t.integer  "recurrs_every",   default: 2
+    t.integer  "recurrs_every",   default: 3
     t.boolean  "booked",          default: false
     t.integer  "admin_id"
     t.integer  "mentor_id"

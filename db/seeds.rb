@@ -75,6 +75,7 @@ shift_to_book = Shift.create(time_zone: "UTC -08:00",
                      start: 3.days.from_now,
                      end: 4.days.from_now)
 
+note = hunter.notes.create(body: "James is GREAT!", mentor_id: james.id)
 
 james.employments << uber
 james.shifts << shift_to_book

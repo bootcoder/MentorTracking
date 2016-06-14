@@ -5,6 +5,9 @@ class Shift < ActiveRecord::Base
   belongs_to :admin
   belongs_to :location
 
+  validates_presence_of :start
+  validates_presence_of :end
+
   enum accepts_mentors: [:employed_mentors, :unemployed_mentors, :all_mentors]
 
   enum recurrs_every: [:day, :week, :phase, :stand_alone]
