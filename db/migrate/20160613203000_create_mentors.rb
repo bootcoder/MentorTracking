@@ -8,6 +8,7 @@ class CreateMentors < ActiveRecord::Migration
       t.string :img_url
       t.string :github_handle
       t.string :cohort
+
       t.string :provider
       t.string :uid
       t.string :token
