@@ -8,7 +8,7 @@ class CreateShifts < ActiveRecord::Migration
       t.string :time_zone, default: "UTC -08:00"
 
       t.integer :accepts_mentors, default: 2
-      t.integer :recurrs_every, default: 2
+      t.integer :recurrs_every, default: 3
 
       t.boolean :booked, default: false
 
